@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cnpm.StartView">
+    <children>
+        <Pane prefHeight="128.0" prefWidth="600.0" style="-fx-background-color: #0598FF;">
+            <children>
+                <Text fill="WHITE" layoutX="32.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHÀO MỪNG BẠN ĐẾN VỚI HỆ THỐNG QUẢN LÝ CHẤM CÔNG" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Text>
+                <Text fx:id="label" fill="WHITE" layoutX="269.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhóm 12" textAlignment="CENTER">
+                    <font>
+                        <Font name="Bookman Old Style Italic" size="14.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+        <Pane fx:id="taskBarPane" prefHeight="23.0" prefWidth="600.0" style="-fx-background-color: rgb(128,128,128);">
+            <children>
+                <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="9.0" layoutY="4.0" onMouseClicked="#closeStage">
+                    <image>
+                        <Image url="@../../../pic/close-mac-os-icon.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="26.0" layoutY="4.0" onMouseClicked="#minimizeStage">
+                    <image>
+                        <Image url="@../../../pic/minimal-macos-icon.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <HBox alignment="CENTER" layoutX="72.0" layoutY="139.0" prefHeight="239.0" prefWidth="456.0">
+            <children>
+                <Pane onMouseClicked="#onCheckinClick" onMousePressed="#onCheckinClick" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fitHeight="186.0" fitWidth="189.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../pic/check-in.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="44.0" layoutY="193.0" text="Chấm công">
+                            <font>
+                                <Font name="Serif Regular" size="24.0" />
+                            </font>
+                            <textFill>
+                                <LinearGradient endX="0.725552050473186" endY="0.6182964585180913">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color red="0.7603963613510132" green="0.15107212960720062" blue="0.8157894611358643" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="0.9977628635346756">
+                                            <color>
+                                                <Color red="0.20318929851055145" green="0.1419753134250641" blue="0.6666666865348816" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="0.20318929851055145" green="0.1419753134250641" blue="0.6666666865348816" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane prefHeight="205.0" prefWidth="61.0" />
+                <Pane onMouseClicked="#onLoginClick" onMousePressed="#onLoginClick" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fitHeight="186.0" fitWidth="209.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../pic/login.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="47.0" layoutY="193.0" text="Đăng nhập">
+                            <font>
+                                <Font name="Serif Regular" size="24.0" />
+                            </font>
+                            <textFill>
+                                <LinearGradient endX="0.725552050473186" endY="0.6182964585180913">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color red="0.7603963613510132" green="0.15107212960720062" blue="0.8157894611358643" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="0.9977628635346756">
+                                            <color>
+                                                <Color red="0.20318929851055145" green="0.1419753134250641" blue="0.6666666865348816" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="0.20318929851055145" green="0.1419753134250641" blue="0.6666666865348816" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

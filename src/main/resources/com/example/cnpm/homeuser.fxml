@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1"
+            fx:controller="com.example.cnpm.Homeuser">
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="214.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox layoutX="-8.0" prefHeight="400.0" prefWidth="222.0">
+                    <children>
+                        <Button fx:id="editprofile" mnemonicParsing="false" onAction="#editprofile" prefHeight="29.0"
+                                prefWidth="217.0" style="-fx-background-color: #0598ff;" text="Sửa thông tin cá nhân"
+                                textFill="WHITE">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets left="2.0" top="5.0"/>
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="viewschedule" mnemonicParsing="false" onAction="#viewschedule" prefHeight="28.0"
+                                prefWidth="217.0" style="-fx-background-color: #0598ff;"
+                                text="Lịch làm việc, trạng thái cá nhân" textFill="WHITE">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets left="2.0" top="5.0"/>
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="changeschedule" mnemonicParsing="false" onAction="#changeschedule"
+                                prefHeight="28.0" prefWidth="217.0" style="-fx-background-color: #0598ff;"
+                                text="Đổi lịch làm việc" textFill="WHITE">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets left="2.0" top="5.0"/>
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </right>
+    <left>
+        <AnchorPane prefHeight="400.0" prefWidth="375.0" style="-fx-background-color: white;"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <BorderPane layoutX="15.0" layoutY="14.0" prefHeight="72.0" prefWidth="343.0"
+                            style="-fx-background-color: white; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;">
+                    <left>
+                        <ImageView fitHeight="59.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true"
+                                   BorderPane.alignment="CENTER">
+                            <image>
+                                <Image url="@../../../pic/9131529.png"/>
+                            </image>
+                            <BorderPane.margin>
+                                <Insets left="5.0"/>
+                            </BorderPane.margin>
+                        </ImageView>
+                    </left>
+                    <center>
+                        <Label fx:id="setname" alignment="TOP_LEFT" prefHeight="20.0" prefWidth="264.0" text="HỌ VÀ TÊN"
+                               textFill="#0598ff" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets/>
+                            </BorderPane.margin>
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                    </center>
+                </BorderPane>
+                <Label layoutX="21.0" layoutY="102.0" text="Thông tin cơ bản" textFill="#aa0000">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Label>
+                <Text layoutX="22.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number: ">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Text>
+                <Text layoutX="40.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Text>
+                <Label fx:id="setphone" layoutX="111.0" layoutY="136.0" prefHeight="17.0" prefWidth="257.0"/>
+                <Label fx:id="setemail" layoutX="111.0" layoutY="168.0" prefHeight="17.0" prefWidth="261.0"/>
+            </children>
+        </AnchorPane>
+    </left>
+</BorderPane>

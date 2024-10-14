@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cnpm.Homeadmin">
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="214.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="-8.0" layoutY="12.0" prefHeight="388.0" prefWidth="222.0">
+               <children>
+                  <Button fx:id="viewingUserStatus" mnemonicParsing="false" onAction="#viewingUserStatus" prefHeight="29.0" prefWidth="189.0" style="-fx-background-color: #0598ff;" text="Xem trạng thái nhân viên" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="currentlist" mnemonicParsing="false" onAction="#currentlist" prefHeight="28.0" prefWidth="190.0" style="-fx-background-color: #0598ff;" text="Truy xuất ca làm việc" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="rankingall" mnemonicParsing="false" onAction="#rankingall" prefHeight="28.0" prefWidth="190.0" style="-fx-background-color: #0598ff;" text="Xếp hạng nhân viên" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="rankingalldepartment" layoutX="25.0" layoutY="118.0" mnemonicParsing="false" onAction="#rankingalldepartment" prefHeight="28.0" prefWidth="190.0" style="-fx-background-color: #0598ff;" text="Xếp hạng phòng, ban" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#logout" prefHeight="28.0" prefWidth="190.0" style="-fx-background-color: #0598ff;" text="Đăng xuất" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="375.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane layoutX="15.0" layoutY="14.0" prefHeight="72.0" prefWidth="343.0" style="-fx-background-color: white; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;">
+               <left>
+                  <ImageView fitHeight="59.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../pic/9131529.png" />
+                     </image>
+                     <BorderPane.margin>
+                        <Insets left="5.0" />
+                     </BorderPane.margin>
+                  </ImageView>
+               </left>
+               <center>
+                  <Label fx:id="setname" alignment="TOP_LEFT" prefHeight="20.0" prefWidth="264.0" text="HỌ VÀ TÊN" textFill="#0598ff" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
+            <Label layoutX="21.0" layoutY="102.0" text="Thông tin cơ bản" textFill="#aa0000">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Text layoutX="23.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="44.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Label fx:id="setphone" layoutX="112.0" layoutY="136.0" prefHeight="17.0" prefWidth="253.0" />
+            <Label fx:id="setemail" layoutX="112.0" layoutY="165.0" prefHeight="17.0" prefWidth="253.0" />
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <Pane fx:id="taskBarPane" prefHeight="23.0" prefWidth="600.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="9.0" layoutY="4.0" onMouseClicked="#closeStage">
+               <image>
+                  <Image url="@../../../pic/close-mac-os-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="26.0" layoutY="4.0" onMouseClicked="#minimizeStage">
+               <image>
+                  <Image url="@../../../pic/minimal-macos-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>

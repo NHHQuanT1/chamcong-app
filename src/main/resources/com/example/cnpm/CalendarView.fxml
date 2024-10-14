@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="670.0" prefWidth="715.0" style="-fx-background-color: #f2fafc;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cnpm.CalendarView">
+    <FlowPane fx:id="calendar" hgap="10.0" layoutX="14.0" layoutY="116.0" prefHeight="498.0" prefWidth="716.0" vgap="5.0" />
+    <HBox alignment="CENTER" layoutX="163.0" layoutY="26.0" prefHeight="44.0" prefWidth="419.0" spacing="5.0">
+        <children>
+         <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#backOneMonth" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../pic/previous.png" />
+            </image>
+         </ImageView>
+            <Text fx:id="year" fill="#0598ff" strokeType="OUTSIDE" strokeWidth="0.0" text="####">
+                <font>
+                    <Font name="System Bold" size="22.0" />
+                </font>
+            </Text>
+            <Text fx:id="month" fill="#0598ff" strokeType="OUTSIDE" strokeWidth="0.0" text="####">
+                <font>
+                    <Font size="22.0" />
+                </font>
+            </Text>
+         <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#forwardOneMonth" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../pic/next.png" />
+            </image>
+         </ImageView>
+        </children>
+    </HBox>
+    <HBox alignment="CENTER" layoutX="14.0" layoutY="78.0" prefHeight="44.0" prefWidth="716.0" spacing="88.75" style="-fx-background-color: #0598FF;">
+        <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Su" textAlignment="CENTER">
+            <font>
+               <Font name="Arial Bold" size="12.0" />
+            </font></Text>
+            <Text fill="WHITE" layoutX="213.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mo" textAlignment="CENTER">
+            <font>
+               <Font name="Arial Bold" size="12.0" />
+            </font></Text>
+            <Text fill="WHITE" layoutX="222.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tu" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Text>
+            <Text fill="WHITE" layoutX="232.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We" textAlignment="CENTER">
+            <font>
+               <Font name="Arial Bold" size="12.0" />
+            </font></Text>
+            <Text fill="WHITE" layoutX="241.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Th" textAlignment="CENTER">
+            <font>
+               <Font name="Arial Bold" size="12.0" />
+            </font></Text>
+            <Text fill="WHITE" layoutX="251.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fr" textAlignment="CENTER">
+            <font>
+               <Font name="Arial Bold" size="12.0" />
+            </font></Text>
+            <Text fill="WHITE" layoutX="266.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sa" textAlignment="CENTER">
+            <font>
+               <Font name="Arial Bold" size="12.0" />
+            </font></Text>
+        </children>
+        <padding>
+            <Insets right="9.0" />
+        </padding>
+    </HBox>
+   <Pane fx:id="taskBarPane" layoutX="-2.0" prefHeight="23.0" prefWidth="744.0" style="-fx-background-color: gray;">
+      <children>
+         <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="9.0" layoutY="4.0" onMouseClicked="#closeStage">
+            <image>
+               <Image url="@../../../pic/close-mac-os-icon.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="26.0" layoutY="4.0" onMouseClicked="#minimizeStage">
+            <image>
+               <Image url="@../../../pic/minimal-macos-icon.png" />
+            </image>
+         </ImageView>
+      </children>
+   </Pane>
+
+</AnchorPane>

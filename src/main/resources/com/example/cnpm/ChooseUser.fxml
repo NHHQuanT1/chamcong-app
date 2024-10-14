@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cnpm.ChooseUser">
+   <top>
+      <Pane fx:id="taskBarPane" prefHeight="23.0" prefWidth="600.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="9.0" layoutY="4.0" onMouseClicked="#closeStage">
+               <image>
+                  <Image url="@../../../pic/close-mac-os-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="26.0" layoutY="4.0" onMouseClicked="#minimizeStage">
+               <image>
+                  <Image url="@../../../pic/minimal-macos-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="130.0" prefWidth="401.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="32.0" layoutY="45.0" text="ID nhân viên:" textFill="#0598ff">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textField" layoutX="154.0" layoutY="45.0" prefHeight="29.0" prefWidth="175.0" />
+            <Button layoutX="375.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#viewProfileStatus_adminView" style="-fx-background-color: #0598ff;" text="Xem trạng thái" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="invalidId" layoutX="176.0" layoutY="84.0" prefHeight="17.0" prefWidth="339.0" textFill="RED" />
+            <Button layoutX="499.0" layoutY="44.0" mnemonicParsing="false" onAction="#backAdmin" style="-fx-background-color: #0598ff;" text="Quay lại" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

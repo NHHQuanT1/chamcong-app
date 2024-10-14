@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cnpm.PersonalRanking2">
+   <children>
+      <BorderPane layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <right>
+            <AnchorPane prefHeight="126.0" prefWidth="222.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutY="14.0" prefHeight="386.0" prefWidth="222.0">
+                     <children>
+                        <Button contentDisplay="CENTER" layoutX="25.0" layoutY="55.0" onAction="#handleDepartmentRankingButton" prefHeight="29.0" prefWidth="190.0" style="-fx-background-color: #0598ff;" text="Xếp hạng" textAlignment="CENTER" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button contentDisplay="CENTER" layoutX="25.0" layoutY="15.0" onAction="#backButtonClicked" prefHeight="29.0" prefWidth="190.0" style="-fx-background-color: #0598ff;" text="Trở về" textAlignment="CENTER" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </right>
+         <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="372.0" prefWidth="381.0">
+                     <children>
+                        <TableView fx:id="departmentRankingTableView" prefHeight="670.0" prefWidth="183.0">
+                           <columns>
+                              <TableColumn fx:id="rankColumn" prefWidth="98.4000244140625" style="-fx-background-color: #0598ff;" text="STT" />
+                              <TableColumn fx:id="departmentIDColumn" prefWidth="127.199951171875" style="-fx-background-color: #0598ff;" text="DepartmentID" />
+                              <TableColumn fx:id="departmentNameColumn" prefWidth="152.00006103515625" style="-fx-background-color: #0598ff;" text="DepartmentName" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <Label fx:id="label" alignment="TOP_LEFT" prefHeight="27.0" prefWidth="210.0" text="XẾP HẠNG PHÒNG, BAN" textAlignment="CENTER" textFill="#0598ff" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+      <Pane fx:id="taskBarPane" prefHeight="23.0" prefWidth="600.0" style="-fx-background-color: gray;">
+         <children>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="9.0" layoutY="4.0" onMouseClicked="#closeStage">
+               <image>
+                  <Image url="@../../../pic/close-mac-os-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="26.0" layoutY="4.0" onMouseClicked="#minimizeStage">
+               <image>
+                  <Image url="@../../../pic/minimal-macos-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
